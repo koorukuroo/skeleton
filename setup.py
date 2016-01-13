@@ -6,6 +6,7 @@ except ImportError:
     from distutils.core import setup
 
 config = {
+    'packages': ['NAME'],
     'description': 'My project',
     'author': 'Kyunghoon Kim',
     'url': 'http://core.today',
@@ -13,9 +14,10 @@ config = {
     'author_email': 'preware@gmail.com',
     'version': '0.1',
     'install_requirements': ['nose'],
-    'packages': ['NAME'],
     'scripts': [],
-    'name': 'project name'
+    'name': 'project name',
+    'include_pakcage_data': True,
+    'package_data': {'': ['assets/*.txt']}
 }
 
 setup(**config)
